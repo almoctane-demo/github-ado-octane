@@ -4,7 +4,7 @@ jobs:
   steps:
   - task: octane-start-task@1
     inputs:
-      OctaneServiceConnection: 'github-ado-octane'
+      OctaneServiceConnection: 'github-ado-octane-ed'
       WorkspaceList: '52001'
 
 - job: A
@@ -37,5 +37,5 @@ jobs:
   steps:
   - task: octane-end-task@1
     inputs:
-      OctaneServiceConnection: 'github-ado-octane'
+      OctaneServiceConnection: 'github-ado-octane-ed'
       WorkspaceList: '52001'
