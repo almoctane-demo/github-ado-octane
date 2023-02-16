@@ -2,11 +2,10 @@ jobs:
 - job: AlmOctanePipelineStart
   condition: always()
   steps:
-  - task: octane-start-task@1
-    inputs:
-      OctaneServiceConnection: 'github-ado-octane-ed'
-      WorkspaceList: '52001'
-
+- task: octane-start-task@2
+  inputs:
+    OctaneServiceConnection: 'github-ado-octane-ed'
+    WorkspaceList: '52001'
 - job: A
   dependsOn: AlmOctanePipelineStart
   steps:
@@ -35,7 +34,7 @@ jobs:
   - A
   - B
   steps:
-  - task: octane-end-task@1
-    inputs:
-      OctaneServiceConnection: 'github-ado-octane-ed'
-      WorkspaceList: '52001'
+- task: octane-end-task@2
+  inputs:
+    OctaneServiceConnection: 'github-ado-octane-ed'
+    WorkspaceList: '52001'
